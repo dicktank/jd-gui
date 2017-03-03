@@ -38,7 +38,7 @@ public abstract class ClassFileSourcePrinter implements Printer
             printEscape(s);
     }
 
-    public void printNumeric(String s) { append(s); }
+    public void printNumeric(String s) { append(s+"/*0x"+Integer.toHexString(Integer.parseInt(s))+"*/"); }
 
     public void printString(String s, String scopeInternalName)  { append(s); }
 
